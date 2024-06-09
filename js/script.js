@@ -1,6 +1,7 @@
 
 let altura = 0
 let largura = 0
+let vidas = 1
 
 const ajustaTamanhoDoPalcoJogo = () => {
     altura = window.innerHeight
@@ -41,6 +42,14 @@ function posicaoRandomica () {
     //Remover mosquito caso exista
     if(document.getElementById('mosquito')){
         document.getElementById('mosquito').remove()
+
+        if(vidas > 3) {
+            alert('Interromper o jogo (game over')
+        } else {
+            document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+
+            vidas++
+        }
     }
 
     let posicaoX = Math.floor(Math.random() * largura) - 90
