@@ -1,10 +1,10 @@
 function iniciarJogo() {
-    let nivel = document.querySelector('#nivel').value 
+    let nivel = document.querySelector('#nivel').value;
 
-    if(nivel === ''){
-        alert('Selecione um nível para inciar o jogo!')
-        return false
+    if (nivel === '') {
+        alert('Selecione um nível para iniciar o jogo!');
+        return false;
     } else {
-        alert(nivel)
+        window.location.href = "jogo.html?" + nivel;
     }
 }
