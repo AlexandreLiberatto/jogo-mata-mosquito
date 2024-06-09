@@ -1,4 +1,10 @@
 
+body {
+    background-image: url(/imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100;
+}
+
 .mosquito1 {
     width: 3rem;
     height: 3rem;
@@ -15,4 +21,12 @@
     width: 7rem;
     height: 7rem;
     
+}
+
+.ladoA {
+    transform: scaleX(1);
+}
+
+.ladoB {
+    transform: scaleX(-1);
 }
