@@ -2,6 +2,7 @@
 let altura = 0
 let largura = 0
 let vidas = 1
+let tempo = 16
 
 const ajustaTamanhoDoPalcoJogo = () => {
     altura = window.innerHeight
@@ -9,6 +10,20 @@ const ajustaTamanhoDoPalcoJogo = () => {
 }
 
 ajustaTamanhoDoPalcoJogo()
+
+/* ====cronometro==== */
+let cronometro = setInterval(function() {
+
+    tempo -= 1
+
+    if(tempo < 0){
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+
+    } else {
+       document.getElementById('cronometro').innerHTML = tempo
+    }
+}, 1000)
 
 const tamanhoAleatorio = () => {
     let classe = Math.floor(Math.random() * 3)
@@ -76,6 +91,6 @@ function posicaoRandomica () {
 }
 
 
-setInterval(function(){
+let criaMosquito = setInterval(function(){
     posicaoRandomica()
 }, 1000)
