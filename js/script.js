@@ -19,7 +19,7 @@ let cronometro = setInterval(function() {
     if(tempo < 0){
         clearInterval(cronometro)
         clearInterval(criaMosquito)
-
+        window.location.href = './vitoria.html'
     } else {
        document.getElementById('cronometro').innerHTML = tempo
     }
@@ -93,4 +93,4 @@ function posicaoRandomica () {
 
 let criaMosquito = setInterval(function(){
     posicaoRandomica()
-}, 1000)
+}, 2000)
