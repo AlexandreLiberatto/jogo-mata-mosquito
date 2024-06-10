@@ -14,6 +14,8 @@ if (nivel === 'facil') {
     criaMosquitoTempo = 1000;
 } else if (nivel === 'dificil') {
     criaMosquitoTempo = 750;
+} else if (nivel === 'vanDamme') {
+    criaMosquitoTempo = 450;
 }
 
 const ajustaTamanhoDoPalcoJogo = () => {
